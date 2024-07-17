@@ -1,0 +1,18 @@
+#_#_#_#_#_#_#_#_#
+
+--> Challenge-1:
+
+There are total 9 places, now player (either user or bot) will press the button where they want to mark. After this, the respective place's LED should be turned on with respective colour. (Blue: If it is marked by user, Red: If it is marked by Bot)
+
+At the end, the all three places' LED should be turned out to GREEN, which represent the winner's move. 
+
+Therefore, if I use 9 RGB LEDs to represent the each place, then total (9*3) 27 GPIO pins will be acquired on ESP32. Where ESP32 have only 34 physical GPIO pins. Except the LEDs, still I have to use GPIO pins for LCD display and Keypad operation.
+
+#_#_#_#_#_#_#_#_#
+
+--> Challenge-2 ✅ (SOLVED):
+
+In python code, the logic is written as the first turn will always be done by user. But I want to ask user that who will perform the first turn? If user, then first turn will be done by user, if bot then first turn will be done by bot.
+
+#_#_#_#_#_#_#_#_#
+
