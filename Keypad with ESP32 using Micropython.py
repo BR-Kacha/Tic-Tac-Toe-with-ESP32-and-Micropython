@@ -30,7 +30,7 @@ for y in range(0,3):
 ##############################Scan keys ####################
     
 print("Please enter a key from the keypad")
-    
+
 def scankeys():  
     for row in range(4):
         for col in range(3):
@@ -38,9 +38,11 @@ def scankeys():
             key = None
             
             if col_pins[col].value() == 1:
-                print("You have pressed:", matrix_keys[row][col])
+                while col_pins[col].value() == 1:
+                    time.sleep(0.3)
                 key_press = matrix_keys[row][col]
                 time.sleep(0.3)
+                print("You have pressed:", matrix_keys[row][col])
                     
         row_pins[row].off()
 
